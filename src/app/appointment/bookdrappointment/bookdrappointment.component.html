@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">
+      {{pageTitle}}
+      <input type="text"
+        [(ngModel)]="filterSpecialist" />
+    </div>
+    <div class="card-body">
+
+
+      <div class="row"
+          *ngIf="filterSpecialist">
+        <div class="col-md-6">
+          <h4>Filtered by: {{filterSpecialist}}</h4>
+        </div>
+      </div>
+
+      <div class="row"
+          *ngIf="!filterSpecialist">
+        <div class="col-md-6">
+          <h4>Specialist</h4>
+        </div>
+      </div>
+      <div class="table-responsive">
+      <table class="table mb-0">
+        <tbody>
+          <tr>
+            <td>
+              <a routerLink = 'specialists'>
+                ENT
+              </a>
+              </td>
+          </tr>
+          <tr>
+            <td>Gynocologist</td>
+          </tr>
+          <tr>
+            <td>Nephrologist</td>
+          </tr>
+          <tr>
+            <td>Cardiologist</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
