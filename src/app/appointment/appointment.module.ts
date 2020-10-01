@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { BookdrappointmentComponent } from './bookdrappointment/bookdrappointment.component';
 import { SpecialistsComponent } from './specialists/specialists.component';
 import { SpecialistDetailsComponent } from './specialist-details/specialist-details.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { SpecialistDetailsComponent } from './specialist-details/specialist-deta
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     RouterModule.forChild([
       {
         path: '',
         component: BookdrappointmentComponent
       },
       {
-        path: 'specialists',
+        path: ':code',
         component: SpecialistsComponent
       },
       {

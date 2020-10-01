@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SpecialistData } from '../specialist-data';
+import { Specialist } from '../specialist';
+import { from } from 'rxjs';
+
 @Component({
   selector: 'app-bookdrappointment',
   templateUrl: './bookdrappointment.component.html',
@@ -7,21 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookdrappointmentComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private specialistData: SpecialistData
+    ) { }
   pageTitle = 'Find specialist';
-  _filterSpecialist  = '';
+  _filterKeyword  = '';
+  specialists: Specialist[] = [];
+  filteredSpecialists: Specialist[] = [];
 
-  get filterSpecialist(): string {
-    return this._filterSpecialist;
+  get filterKeyword(): string {
+    return this._filterKeyword;
   }
 
-  set filterSpecialist(value: string) {
-    this._filterSpecialist = value;
+  set filterKeyword(value: string) {
+    this._filterKeyword = value;
+    this.filteredSpecialists = this.filterKeyword ? this.performFilter(value) : this.specialists;
   }
 
-
+  performFilter(filterBy: string): Specialist[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.specialists.filter((specialist: Specialist) =>
+      specialist.specialistName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
 
   ngOnInit() {
+    this.specialists = this.specialistData.specialists;
+    this.filteredSpecialists = this.specialistData.specialists;
   }
 
 }

@@ -2,20 +2,20 @@
     <div class="card-header">
       {{pageTitle}}
       <input type="text"
-        [(ngModel)]="filterSpecialist" />
+        [(ngModel)]="filterKeyword" />
     </div>
     <div class="card-body">
 
 
       <div class="row"
-          *ngIf="filterSpecialist">
+          *ngIf="filterKeyword">
         <div class="col-md-6">
-          <h4>Filtered by: {{filterSpecialist}}</h4>
+          <h4>Filtered by: {{filterKeyword}}</h4>
         </div>
       </div>
 
       <div class="row"
-          *ngIf="!filterSpecialist">
+          *ngIf="!filterKeyword">
         <div class="col-md-6">
           <h4>Specialist</h4>
         </div>
@@ -23,21 +23,10 @@
       <div class="table-responsive">
       <table class="table mb-0">
         <tbody>
-          <tr>
+          <tr  *ngFor = 'let item of filteredSpecialists'>
             <td>
-              <a routerLink = 'specialists'>
-                ENT
-              </a>
-              </td>
-          </tr>
-          <tr>
-            <td>Gynocologist</td>
-          </tr>
-          <tr>
-            <td>Nephrologist</td>
-          </tr>
-          <tr>
-            <td>Cardiologist</td>
+              <a routerLink = '{{item.specialistName}}'>{{item.specialistName}}</a>
+            </td>
           </tr>
         </tbody>
       </table>

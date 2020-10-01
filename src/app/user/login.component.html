@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header">
+    {{title}}
+  </div>
+  <div class="card-body">
+    <form #loginForm = "ngForm"
+          (ngSubmit)="login(loginForm)">
+      <fieldset>
+        <div class="form-group row">
+          <label class="col-md-2 col-form-lable">
+            User Name
+          </label>
+          <div class="col-md-8">
+            <input  class="form-control"
+                    type="text"
+                    placeholder="User Name"
+                    ngModel
+                    name="userName"
+                    #userNameVar="ngModel">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-2 col-form-lable">
+            Password
+          </label>
+          <div class="col-md-8">
+            <input class="form-control"
+                   type="password"
+                   placeholder="Password"
+                   ngModel
+                   name="password"
+                   #passwordVar="ngModel">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 offset-md-2">
+            <button class="btn btn-primary mr-3"
+                    type="submit"
+                    style="width:80px"
+                    >
+              Log In
+            </button>
+            <button class="btn btn-outline-secondary"
+                    type="button"
+                    style="width:80px"
+                    >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

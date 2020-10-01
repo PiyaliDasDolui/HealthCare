@@ -1,4 +1,49 @@
-<ul>
+<div class="card">
+  <div class="card-header"></div>
+  <div class="car-body">
+    <div class="row"></div>
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th>
+              Doctor Name
+            </th>
+            <th>
+              Experience
+            </th>
+            <th>
+              Fees
+            </th>
+            <th>
+              Contact
+            </th>
+            <th>
+              Rating
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = 'let doctor of doctors'>
+            <td>{{doctor.doctorname}}</td>
+            <td>{{doctor.experience}}</td>
+            <td>{{doctor.fees}}</td>
+            <td>{{doctor.doctorContact}}</td>
+            <td>
+              <app-star [rating] = "doctor.rating">
+
+              </app-star>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- <ul>
   <li>
     <a routerLink = '{{1}}'> Mukharjee </a>
   </li>
@@ -8,4 +53,4 @@
   <li>
     Gupta
   </li>
-</ul>
+</ul> -->
