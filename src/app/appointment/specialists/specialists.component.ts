@@ -17,11 +17,14 @@ export class SpecialistsComponent implements OnInit {
     private doctorsData: DoctorData
     ) { }
 
-    doctorBySpeciality( code: string ) {
-      code = code.toLocaleLowerCase();
-      const allDoctor = this.doctorsData.Doctors;
-      this.doctors = allDoctor.filter((doctor: Doctor) => doctor.code.toLocaleLowerCase().indexOf(code) !== -1 )
-    }
+  doctorBySpeciality( code: string ) {
+    code = code.toLocaleLowerCase();
+    const allDoctor = this.doctorsData.Doctors;
+    this.doctors = allDoctor.filter((doctor: Doctor) => doctor.code.toLocaleLowerCase().indexOf(code) !== -1 )
+  }
+  bookappointment(): void{
+      alert('Appointment Booked  Teporarily. Date time page design is coming soon')
+  }
 
   ngOnInit() {
     const flag = this.router.snapshot.paramMap.get('code');

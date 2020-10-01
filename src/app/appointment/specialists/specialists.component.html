@@ -21,6 +21,7 @@
             <th>
               Rating
             </th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -33,6 +34,13 @@
               <app-star [rating] = "doctor.rating">
 
               </app-star>
+            </td>
+            <td>
+              <button
+                      class="btn btn-primary mr-3"
+                      type="submit"
+                      style="width:80px"
+                      (click)="bookappointment()">Book</button>
             </td>
           </tr>
         </tbody>
