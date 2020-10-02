@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HealthDashboardComponent } from './health-dashboard/health-dashboard.component';
 import { UserModule } from './user/user.module';
+import { ShoppingCartComponent } from './marketing/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HealthDashboardComponent
+    HealthDashboardComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

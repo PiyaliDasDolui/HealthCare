@@ -1,5 +1,9 @@
 import { Medicine } from './medicine';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class MedicineData {
   medicines: Medicine[] = [
     {

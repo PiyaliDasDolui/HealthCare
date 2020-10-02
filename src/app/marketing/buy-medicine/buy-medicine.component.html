@@ -1,8 +1,31 @@
+
 <div class="card">
   <div class="card-header">
-
+    <input type="text" placeholder="what medicine you are looking for?" [(ngModel)] = "filterBy">
   </div>
   <div class="card-body">
-    marketing related stuff will goes here.
+    <div class="row">
+        <div class="col-md-6">
+          <h4>Suggested Products</h4>
+        </div>
+      </div>
+    <div class="row">
+      <div class="table-responsive">
+        <table class="table mb-0">
+          <tbody>
+            <tr *ngFor = 'let medicine of filteredMedicines'>
+              <td>
+                <b>{{medicine.name}}</b>
+                <p>{{medicine.quantity}}</p>
+                <p>{{medicine.price|currency}}</p>
+                <p>
+                  <a style="float: right;" (click) = "addToCart()">Add To cart</a>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
