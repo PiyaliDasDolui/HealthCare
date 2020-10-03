@@ -2,8 +2,6 @@ import { Component, OnChanges, OnInit } from '@angular/core';
 
 import { CartService } from './marketing/cart.service';
 import {  slideInAnimation } from './app.animation';
-import { from } from 'rxjs';
-
 
 @Component({
   selector: 'app-root',
@@ -11,7 +9,7 @@ import { from } from 'rxjs';
   styleUrls: ['./app.component.css'],
   animations: [slideInAnimation]
 })
-export class AppComponent implements OnChanges, OnInit{
+export class AppComponent implements OnChanges, OnInit {
   title = 'HealthCare';
   totalItemsCount = 0;
   constructor(private cartService: CartService) {}
@@ -20,7 +18,7 @@ export class AppComponent implements OnChanges, OnInit{
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.cartService.sharedMessage.subscribe(message => this.totalItemsCount = +message);
   }
 
