@@ -36,10 +36,11 @@ export class BuyMedicineComponent implements OnInit {
       );
   }
 
-  addToCart(): void {
+  addToCart(medicine: Medicine): void {
     this.cartService.totalItemsCount = (+this.cartService.totalItemsCount + 1).toString();
     this.itemCount = +this.cartService.totalItemsCount;
     this.cartService.nextMessage(this.itemCount.toString());
+    this.cartService.addMedicines(medicine);
   }
 
   newMessage() {

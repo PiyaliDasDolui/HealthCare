@@ -4,10 +4,12 @@ import { RouterModule } from '@angular/router';
 import { BuyMedicineComponent } from './buy-medicine/buy-medicine.component';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @NgModule({
   declarations: [
-    BuyMedicineComponent
+    BuyMedicineComponent,
+    CardDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -16,6 +18,10 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
       {
         path: '',
         component: BuyMedicineComponent
+      },
+      {
+        path: 'caartdetails',
+        component: CardDetailsComponent
       }
     ])
   ]
