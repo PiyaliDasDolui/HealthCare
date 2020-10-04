@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HealthDashboardComponent } from './health-dashboard/health-dashboard.component';
 import { UserModule } from './user/user.module';
 import { ShoppingCartComponent } from './marketing/shopping-cart/shopping-cart.component';
+import { NotificationModule } from './notification/notification.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ShoppingCartComponent } from './marketing/shopping-cart/shopping-cart.c
     AppRoutingModule,
     FormsModule,
     UserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NotificationModule
   ],
   declarations: [
     AppComponent,

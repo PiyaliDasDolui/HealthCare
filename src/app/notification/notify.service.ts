@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class NotifyService {
   currentDate = new Date();
-  message = this.currentDate.toLocaleDateString();
+  message = 'this.currentDate.toLocaleDateString();';
+  isDisplay = false;
   constructor() { }
 }

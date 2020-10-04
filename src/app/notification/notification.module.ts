@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotifyComponent } from './notify/notify.component';
 import { RouterModule } from '@angular/router';
+import { AuthGuard } from '../user/auth.guard';
 
 @NgModule({
   declarations: [NotifyComponent],
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
       {
         path: 'notification',
         component: NotifyComponent,
-        outlet: 'popup'
+        outlet: 'popup',
+        canActivate: [AuthGuard]
       }
     ])
   ]
