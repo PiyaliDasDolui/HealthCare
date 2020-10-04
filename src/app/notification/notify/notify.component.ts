@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NotifyService } from '../notify.service';
 
 @Component({
   selector: 'app-notify',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotifyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private notificationService: NotifyService) { }
+
+  get message(): string {
+    return this.notificationService.message;
+  }
+
+  close(): void {
+
+  }
 
   ngOnInit() {
   }
