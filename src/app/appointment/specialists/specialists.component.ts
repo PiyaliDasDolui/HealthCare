@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Doctor } from '../doctor';
 import { DoctorData } from '../doctor-data';
+import { DoctorResolved } from '../doctorList';
 
 @Component({
   selector: 'app-specialists',
@@ -17,18 +18,13 @@ export class SpecialistsComponent implements OnInit {
     private doctorsData: DoctorData
     ) { }
 
-  doctorBySpeciality( code: string ) {
-    code = code.toLocaleLowerCase();
-    const allDoctor = this.doctorsData.Doctors;
-    this.doctors = allDoctor.filter((doctor: Doctor) => doctor.code.toLocaleLowerCase().indexOf(code) !== -1 )
-  }
-  bookappointment(): void{
-      alert('Appointment Booked  Teporarily. Date time page design is coming soon')
+  bookappointment(): void {
+      alert('Appointment Booked  Teporarily. Date time page design is coming soon');
   }
 
-  ngOnInit() {
-    const flag = this.router.snapshot.paramMap.get('code');
-    this.doctorBySpeciality(flag);
+  ngOnInit(): void {
+    const resolvedData: DoctorResolved = this.router.snapshot.data['resolvedData'];
+    this.doctors = resolvedData.doctors;
   }
 
 }

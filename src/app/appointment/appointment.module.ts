@@ -6,6 +6,7 @@ import { BookdrappointmentComponent } from './bookdrappointment/bookdrappointmen
 import { SpecialistsComponent } from './specialists/specialists.component';
 import { SpecialistDetailsComponent } from './specialist-details/specialist-details.component';
 import { SharedModule } from '../shared/shared.module';
+import { DoctorDataResolver } from './doctor-data-resolver.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
       },
       {
         path: ':code',
-        component: SpecialistsComponent
+        component: SpecialistsComponent,
+        resolve: { resolvedData: DoctorDataResolver }
       },
       {
         path: 'specialists/:id',
