@@ -1,3 +1,26 @@
-<p>
-  works
-</p>
+<div class="card">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <div *ngIf = 'packages'>
+        No data available
+    </div>
+    <div class='table-responsive' *ngIf = 'packages'>
+      <table class="table mb-0">
+        <tbody>
+          <tr *ngFor='let data of packages'>
+            <td>
+              {{data.name}}
+              <p>
+                Test: 86 <br>
+                By <b>Tyrocare</b><br>
+                {{data.timing}}
+              </p>
+              <button style="float: right;"> ViewPackages</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
