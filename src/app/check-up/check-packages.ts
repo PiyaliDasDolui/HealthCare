@@ -3,4 +3,6 @@ export class CheckPackages {
   name: string;
   charges: number;
   timing: string;
+  organization: string;
+  numberOfTests: number;
 }

@@ -11,25 +11,33 @@ export class CheckPackagesData {
       code: 'dbt',
       name: 'Diabetic Profile - B',
       charges: 2900,
-      timing: '7:30 AM - 9.30 AM'
+      timing: '7:30 AM - 9.30 AM',
+      organization: 'Thyrocare',
+      numberOfTests: 86
     },
     {
       code: 'dbt',
       name: 'Diabetic Profile - A',
       charges: 2900,
-      timing: '7:30 AM - 9.30 AM'
+      timing: '7:30 AM - 9.30 AM',
+      organization: 'Thyrocare',
+      numberOfTests: 86
     },
     {
       code: 'dbt',
       name: 'Diabetic Profile - C',
       charges: 2900,
-      timing: '7:30 AM - 9.30 AM'
+      timing: '7:30 AM - 9.30 AM',
+      organization: 'Thyrocare',
+      numberOfTests: 86
     },
     {
       code: 'dbt',
       name: 'Diabetic Profile - M',
       charges: 2900,
-      timing: '7:30 AM - 9.30 AM'
+      timing: '7:30 AM - 9.30 AM',
+      organization: 'Thyrocare',
+      numberOfTests: 86
     }
   ];
 }
