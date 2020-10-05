@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HealthCheckUpComponent } from './health-check-up/health-check-up.component';
+import { HealthCheckPackagesComponent } from './health-check-packages/health-check-packages.component';
 
 
 @NgModule({
   declarations: [
-    HealthCheckUpComponent
+    HealthCheckUpComponent,
+    HealthCheckPackagesComponent
   ],
   imports: [
     CommonModule,
@@ -14,6 +16,10 @@ import { HealthCheckUpComponent } from './health-check-up/health-check-up.compon
       {
         path: '',
         component: HealthCheckUpComponent
+      },
+      {
+        path: ':code',
+        component: HealthCheckPackagesComponent
       }
     ])
   ]

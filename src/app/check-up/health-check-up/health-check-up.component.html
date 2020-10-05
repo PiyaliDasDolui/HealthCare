@@ -3,7 +3,17 @@
     Healch Checkup
   </div>
   <div class="card-body">
-    Health check up related stuff will go here
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <tbody>
+          <tr *ngFor = 'let data of checkupData'>
+            <td>
+              <a routerLink = '{{data.code}}'>{{data.name}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

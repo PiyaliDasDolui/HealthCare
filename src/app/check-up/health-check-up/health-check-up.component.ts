@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HealthCheckUpData } from '../health-check-up-data';
 
 @Component({
   selector: 'app-health-check-up',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HealthCheckUpComponent implements OnInit {
 
-  constructor() { }
+  checkupData;
+  constructor(private healthCheckUpdata: HealthCheckUpData) { }
 
   ngOnInit() {
+    this.checkupData = this.healthCheckUpdata.checkUpData;
   }
 
 }

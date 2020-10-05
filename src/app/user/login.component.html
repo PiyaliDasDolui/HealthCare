@@ -4,7 +4,8 @@
   </div>
   <div class="card-body">
     <form #loginForm = "ngForm"
-          (ngSubmit)="login(loginForm)">
+          (ngSubmit)="login(loginForm)"
+          autocomplete="off">
       <fieldset>
         <div class="form-group row">
           <label class="col-md-2 col-form-lable">
